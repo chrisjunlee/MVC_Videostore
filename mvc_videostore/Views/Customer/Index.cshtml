@@ -1,0 +1,30 @@
+﻿@model IEnumerable<mvc_videostore.Models.Customer>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<H1>Customers</H1>
+
+@if (Model.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cust in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(cust.Name, "Details", "Customer", new { id = cust.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{ 
+    <p>No customers found.</p>
+}
