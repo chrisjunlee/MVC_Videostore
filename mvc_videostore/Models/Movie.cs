@@ -9,8 +9,5 @@ namespace mvc_videostore.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
     }
-
-    // /movies/random
 }
